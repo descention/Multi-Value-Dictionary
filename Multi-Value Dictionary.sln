@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dictionary-crud", "dictionary-crud\dictionary-crud.csproj", "{4F91F66C-9D10-4C82-B0F0-BBCC6330F718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dictionary-crudTests", "dictionary-crudTests\dictionary-crudTests.csproj", "{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F91F66C-9D10-4C82-B0F0-BBCC6330F718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F91F66C-9D10-4C82-B0F0-BBCC6330F718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F91F66C-9D10-4C82-B0F0-BBCC6330F718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F91F66C-9D10-4C82-B0F0-BBCC6330F718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A25327EC-A5A9-42AD-8EB7-A7E4F3771995}
+	EndGlobalSection
+EndGlobal
