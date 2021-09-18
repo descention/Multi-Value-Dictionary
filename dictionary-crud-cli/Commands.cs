@@ -3,13 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace dictionary_crud.Business
+namespace dictionary_crud_cli
 {
     [Verb("keys", HelpText = "Returns all the keys in the dictionary.  Order is not guaranteed.")]
-    internal class KeysOption
-    {
-
-    }
+    internal class KeysOption { }
 
     [Verb("members", HelpText = "Returns the collection of strings for the given key.  Return order is not guaranteed.  Returns an error if the key does not exists.")]
     internal class MembersOption

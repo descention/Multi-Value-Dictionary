@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dictionary-crud", "dictiona
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dictionary-crudTests", "dictionary-crudTests\dictionary-crudTests.csproj", "{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dictionary-crud-cli", "dictionary-crud-cli\dictionary-crud-cli.csproj", "{4B5D29A8-E949-415D-B1E2-ABF43CC637A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F2DE03-FED0-4E79-A5C0-CED04DA833B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5D29A8-E949-415D-B1E2-ABF43CC637A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5D29A8-E949-415D-B1E2-ABF43CC637A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5D29A8-E949-415D-B1E2-ABF43CC637A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5D29A8-E949-415D-B1E2-ABF43CC637A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

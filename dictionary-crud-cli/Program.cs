@@ -1,14 +1,12 @@
 ﻿using CommandLine;
-using dictionary_crud.Business;
 using dictionary_crud.Services;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace dictionary_crud
+namespace dictionary_crud_cli
 {
     public class Program
     {
@@ -19,7 +17,8 @@ namespace dictionary_crud
             var types = LoadVerbs();
             bool processing = true;
             //while (Helpers.ConsoleHelper.GenerateMenuForType<DictionaryService>()) { }
-            while(processing){
+            while (processing)
+            {
                 Console.Write("> ");
                 var line = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
@@ -75,7 +74,7 @@ namespace dictionary_crud
                     return "unknown command";
             }
         }
-        
+
         private static string BuildList<T>(IEnumerable<T> list)
         {
             var sb = new StringBuilder();
@@ -96,5 +95,6 @@ namespace dictionary_crud
                 .Where(t => t.GetCustomAttribute<VerbAttribute>() != null)
                 .ToArray();
         }
+    }
 }
-}
+
