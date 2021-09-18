@@ -15,16 +15,15 @@ namespace dictionary_crud_cli
         static void Main(string[] args)
         {
             var types = LoadVerbs();
-            bool processing = true;
+            Console.WriteLine("Press Ctrl-C to quit. Type Help for a list of commands.");
             //while (Helpers.ConsoleHelper.GenerateMenuForType<DictionaryService>()) { }
-            while (processing)
+            while (true)
             {
                 Console.Write("> ");
                 var line = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 Parser.Default.ParseArguments(line, types)
-                    .WithParsed(Parsed)
-                    .WithNotParsed(errors => errors.Output().WriteLine("Error"));
+                    .WithParsed(Parsed);
             }
         }
 
