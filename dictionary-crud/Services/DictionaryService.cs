@@ -158,5 +158,24 @@ namespace dictionary_crud.Services
                 }
             }
         }
+
+        /// <summary>
+        /// Returns members that exist for either key, doesn't return duplicates
+        /// </summary>
+        /// <param name="keyA"></param>
+        /// <param name="keyB"></param>
+        /// <returns></returns>
+        public IEnumerable<string> Union(string keyA, string keyB) => Members(keyA).Union(Members(keyB));
+
+        public IEnumerable<string> Except(string keyA, string keyB)
+        {
+            var A = Members(keyA);
+            var B = Members(keyB);
+
+            var first = A.Except(B);
+            var second = B.Except(A);
+
+            return first.Union(second);
+        }
     }
 }

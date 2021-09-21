@@ -16,5 +16,6 @@ namespace dictionary_crud.Services
         public bool MemberExists(string key, string member);
         public IEnumerable<string> AllMembers();
         public IEnumerable<(string key, string member)> Items();
+        public IEnumerable<string> Union(string keyA, string keyB);
     }
 }

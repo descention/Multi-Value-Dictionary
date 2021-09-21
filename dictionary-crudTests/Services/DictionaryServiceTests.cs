@@ -56,10 +56,11 @@ namespace dictionary_crud.Services.Tests
         public void RemoveTest()
         {
             Service.Remove("foo", "bar");
+            Assert.IsTrue(Service.Items().Count() == 1);
         }
 
         [TestMethod()]
-        
+
         public void RemoveTestException()
         {
             Service.Remove("foo", "bar");
@@ -160,6 +161,38 @@ namespace dictionary_crud.Services.Tests
 
             CollectionAssert.AreEquivalent(expected.ToArray(), Service.Items().ToArray());
 
+        }
+
+        [TestMethod()]
+        public void UnionTest()
+        {
+            // foo bar
+            // foo baz
+            // key2 bar
+            // key2 buz
+
+            Service.Add("key2", "bar");
+            Service.Add("key2", "buz");
+
+            var expected = new string[] { "bar", "baz", "buz" };
+
+            CollectionAssert.AreEquivalent(expected, Service.Union("foo", "key2").ToArray());
+        }
+
+        [TestMethod()]
+        public void ExceptTest()
+        {
+            // foo bar
+            // foo baz
+            // key2 bar
+            // key2 buz
+
+            Service.Add("key2", "bar");
+            Service.Add("key2", "buz");
+
+            var expected = new string[] { "baz", "buz" };
+
+            CollectionAssert.AreEquivalent(expected, Service.Except("foo", "key2").ToArray());
         }
     }
 }
