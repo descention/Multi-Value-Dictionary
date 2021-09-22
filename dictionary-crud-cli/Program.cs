@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace dictionary_crud_cli
 {
@@ -20,9 +21,14 @@ namespace dictionary_crud_cli
             while (true)
             {
                 Console.Write("> ");
-                var line = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                var line = Console.ReadLine();
 
-                Parser.Default.ParseArguments(line, types)
+                var commandList = Regex.Matches(line, @"[\""].+?[\""]|[^ ]+")
+                .Cast<Match>()
+                .Select(x => x.Value.Trim('"'))
+                .ToArray();
+
+                Parser.Default.ParseArguments(commandList, types)
                     .WithParsed(Parsed);
             }
         }
