@@ -67,4 +67,13 @@ namespace dictionary_crud_cli
 
     [Verb("items", HelpText = "Returns all keys in the dictionary and all of their members.  Returns nothing if there are none.  Order is not guaranteed.")]
     internal class ItemsOption { }
+
+    [Verb("union")]
+    internal class UnionOption { 
+    
+        [Value(0, MetaName = "KeyA")]
+        public string KeyA { get; set; }
+        [Value(1, MetaName = "KeyB")]
+        public string KeyB { get; set; }
+    }
 }

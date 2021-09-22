@@ -16,7 +16,7 @@ namespace dictionary_crud_cli
         {
             var types = LoadVerbs();
             Console.WriteLine("Press Ctrl-C to quit. Type Help for a list of commands.");
-            //while (Helpers.ConsoleHelper.GenerateMenuForType<DictionaryService>()) { }
+            
             while (true)
             {
                 Console.Write("> ");
@@ -69,6 +69,8 @@ namespace dictionary_crud_cli
                     return BuildList(service.AllMembers());
                 case ItemsOption i:
                     return BuildList(service.Items().Select(item => $"{item.key}: {item.member}"));
+                case UnionOption u:
+                    return BuildList(service.Union(u.KeyA, u.KeyB));
                 default:
                     return "unknown command";
             }
@@ -85,7 +87,7 @@ namespace dictionary_crud_cli
             return sb.ToString();
         }
 
-        //load all types using Reflection
+        // load all types using Reflection
         // https://github.com/commandlineparser/commandline/wiki/Verbs
         private static Type[] LoadVerbs()
         {
