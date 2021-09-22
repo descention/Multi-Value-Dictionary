@@ -23,6 +23,8 @@ namespace dictionary_crud_cli
                 Console.Write("> ");
                 var line = Console.ReadLine();
 
+                // parsing command args with quotes
+                // https://stackoverflow.com/a/59638741/935537
                 var commandList = Regex.Matches(line, @"[\""].+?[\""]|[^ ]+")
                 .Cast<Match>()
                 .Select(x => x.Value.Trim('"'))
